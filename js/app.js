@@ -24,16 +24,17 @@ $(document).ready(function() {
     $('.ryu-ready').show();
   });
  
-  var KEYS = { x: 88 };
-  var ryu = $( '.ryu' );
-  $(document)
-  .on( 'keydown', function( event ) {
-    if ( event.keyCode === KEYS.x ) {
-      ryu.addClass( 'ryu-cool' );
+  var KEYS = {x: 88};
+  //var ryu = $('.ryu');//
+  $(document).on('keydown', function(event) {
+    if (event.keyCode === KEYS.x) {
+      $('.ryu-still').hide();
+      $('.ryu-cool').show();
     }
   })
-  .on( 'keyup', function() {
-    ryu.removeClass( 'ryu-cool' );
+  .on('keyup', function() {
+    $('.ryu-cool').hide();
+    $('.ryu-still').show();
   });
 
 });
